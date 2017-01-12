@@ -16,7 +16,7 @@
 </head>
 <body>
     <div class="window">
-        <object width="100%" height="100%" class="window-gui" data="assets/gui/method-draw-image.svg" type="image/svg+xml"></object>
+        <object width="100%" height="100%" class="window-gui" data="assets/gui/window.svg" type="image/svg+xml"></object>
         
         <div class="top_btns">
             <div class="minimize"></div>

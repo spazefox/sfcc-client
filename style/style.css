@@ -5,6 +5,10 @@
   font-family: HurtM;
   src: url('../fonts/HURTM___.otf');
 }
+@font-face {
+  font-family: Trivial;
+  src: url('../fonts/Trivial-Regular.otf');
+}
 /******************
  ***** GENERAL ***********************************************
 ******************/
@@ -18,9 +22,15 @@ body {
 }
 * {
   box-sizing: border-box;
-  font-family: HurtM, serif;
+  font-family: Trivial, HurtM, serif;
   color: #499FDF;
 }
+/******************
+ ***** PREDEFINED ***********************************************
+******************/
+/******************
+ ***** FORMS ***********************************************
+******************/
 .window {
   top: 100px;
   left: 100px;
@@ -31,6 +41,7 @@ body {
 .window .window-body {
   min-height: 100px;
   min-width: 200px;
+  margin: 26px 34px;
 }
 .window .window-gui {
   position: absolute;
@@ -39,8 +50,8 @@ body {
 }
 .window .top_btns {
   position: absolute;
-  right: 10px;
-  top: 0;
+  right: 33px;
+  top: 10px;
 }
 .window .top_btns .minimize,
 .window .top_btns .maximize,
@@ -54,7 +65,7 @@ body {
 }
 .window .top_btns .minimize:after {
   position: absolute;
-  background-color: #3555ae;
+  background-color: rgba(53, 85, 174, 0.6);
   content: '';
   bottom: 0px;
   height: 2px;
@@ -62,10 +73,10 @@ body {
   left: 2px;
 }
 .window .top_btns .minimize:hover:after {
-  background-color: #499FDF;
+  background-color: rgba(73, 159, 223, 0.6);
 }
 .window .top_btns .maximize:after {
-  border: solid #3555ae 2px;
+  border: solid rgba(53, 85, 174, 0.6) 2px;
   position: absolute;
   content: '';
   height: 6px;
@@ -74,11 +85,11 @@ body {
   top: 0;
 }
 .window .top_btns .maximize:hover:after {
-  border: solid #499FDF 2px;
+  border: solid rgba(73, 159, 223, 0.6) 2px;
 }
 .window .top_btns .close:before,
 .window .top_btns .close:after {
-  background-color: #3555ae;
+  background-color: rgba(53, 85, 174, 0.6);
   position: absolute;
   height: 15px;
   content: '';
@@ -94,7 +105,7 @@ body {
 }
 .window .top_btns .close:hover:after,
 .window .top_btns .close:hover:before {
-  background-color: #499FDF;
+  background-color: rgba(73, 159, 223, 0.6);
 }
 .window .resize_btn {
   position: absolute;

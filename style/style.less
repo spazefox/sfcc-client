@@ -6,6 +6,11 @@
     src: url('../fonts/HURTM___.otf');
 }
 
+@font-face {
+  font-family: Trivial;
+  src: url('../fonts/Trivial-Regular.otf');
+}
+
   /******************
  ***** GENERAL ***********************************************
 ******************/
@@ -20,10 +25,19 @@ body {
 
 * {
     box-sizing: border-box;
-    font-family: HurtM, serif;
+    font-family: Trivial, HurtM, serif;
     color: #499FDF;
 }
 
+  /******************
+ ***** PREDEFINED ***********************************************
+******************/
+  @color-gui-1: rgba(73, 159, 223, 0.6);
+  @color-gui-2: rgba(53, 85, 174, 0.6);
+
+  /******************
+ ***** FORMS ***********************************************
+******************/
 .window {
     top: 100px;
     left: 100px;
@@ -34,6 +48,7 @@ body {
     .window-body {
         min-height: 100px;
         min-width: 200px;
+        margin: 26px 34px;
     }
 
     .window-gui {
@@ -44,8 +59,8 @@ body {
 
     .top_btns {
         position: absolute;
-        right: 10px;
-        top: 0;
+        right: 33px;
+        top: 10px;
 
         .minimize, .maximize, .close {
             position: relative;
@@ -60,7 +75,7 @@ body {
         }
         .minimize:after {
             position: absolute;
-            background-color: #3555ae;
+            background-color: @color-gui-2;
             content: '';
             bottom: 0px;
             height: 2px;
@@ -68,13 +83,13 @@ body {
             left: 2px;
         }
         .minimize:hover:after {
-            background-color: #499FDF;
+            background-color: @color-gui-1;
         }
 
         .maximize {
         }
         .maximize:after {
-            border: solid #3555ae 2px;
+            border: solid @color-gui-2 2px;
             position: absolute;
             content: '';
             height: 6px;
@@ -83,13 +98,13 @@ body {
             top: 0;
         }
         .maximize:hover:after {
-            border: solid #499FDF 2px;
+            border: solid @color-gui-1 2px;
         }
 
         .close {
         }
         .close:before, .close:after {
-            background-color: #3555ae;
+            background-color: @color-gui-2;
             position: absolute;
             height: 15px;
             content: '';
@@ -104,7 +119,7 @@ body {
             transform: rotate(-50deg);
         }
         .close:hover:after, .close:hover:before {
-            background-color: #499FDF;
+            background-color: @color-gui-1;
         }
     }
 
@@ -116,10 +131,10 @@ body {
         right: 0;
     }
     .resize_btn:hover:hover:after, .resize_btn:hover:before {
-        background-color: rgba(73, 159, 223, 0.6);
+        background-color: @color-gui-1;
     }
     .resize_btn:after, .resize_btn:before {
-        background-color: rgba(53, 85, 174, 0.6);
+        background-color: @color-gui-2;
         transform: rotate(45deg);
         position: absolute;
         content: '';
