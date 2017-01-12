@@ -1,0 +1,128 @@
+/******************
+ ***** FONTS ***********************************************
+******************/
+@font-face {
+  font-family: HurtM;
+  src: url('../fonts/HURTM___.otf');
+}
+/******************
+ ***** GENERAL ***********************************************
+******************/
+html,
+body {
+  min-height: 100%;
+}
+body {
+  background: #000;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+  font-family: HurtM, serif;
+  color: #499FDF;
+}
+.window {
+  top: 100px;
+  left: 100px;
+  position: fixed;
+  background: rgba(255, 255, 255, 0.07);
+  display: block;
+}
+.window .window-body {
+  min-height: 100px;
+  min-width: 200px;
+}
+.window .window-gui {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.window .top_btns {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+.window .top_btns .minimize,
+.window .top_btns .maximize,
+.window .top_btns .close {
+  position: relative;
+  margin: 0 2px;
+  height: 10px;
+  width: 15px;
+  float: left;
+  top: -4px;
+}
+.window .top_btns .minimize:after {
+  position: absolute;
+  background-color: #3555ae;
+  content: '';
+  bottom: 0px;
+  height: 2px;
+  width: 10px;
+  left: 2px;
+}
+.window .top_btns .minimize:hover:after {
+  background-color: #499FDF;
+}
+.window .top_btns .maximize:after {
+  border: solid #3555ae 2px;
+  position: absolute;
+  content: '';
+  height: 6px;
+  width: 10px;
+  left: 0;
+  top: 0;
+}
+.window .top_btns .maximize:hover:after {
+  border: solid #499FDF 2px;
+}
+.window .top_btns .close:before,
+.window .top_btns .close:after {
+  background-color: #3555ae;
+  position: absolute;
+  height: 15px;
+  content: '';
+  width: 2px;
+  left: 6px;
+  top: -3px;
+}
+.window .top_btns .close:before {
+  transform: rotate(50deg);
+}
+.window .top_btns .close:after {
+  transform: rotate(-50deg);
+}
+.window .top_btns .close:hover:after,
+.window .top_btns .close:hover:before {
+  background-color: #499FDF;
+}
+.window .resize_btn {
+  position: absolute;
+  height: 17px;
+  width: 17px;
+  bottom: 0;
+  right: 0;
+}
+.window .resize_btn:hover:hover:after,
+.window .resize_btn:hover:before {
+  background-color: rgba(73, 159, 223, 0.6);
+}
+.window .resize_btn:after,
+.window .resize_btn:before {
+  background-color: rgba(53, 85, 174, 0.6);
+  transform: rotate(45deg);
+  position: absolute;
+  content: '';
+}
+.window .resize_btn:after {
+  height: 9px;
+  bottom: 0px;
+  width: 3px;
+  right: 4px;
+}
+.window .resize_btn:before {
+  bottom: -1px;
+  height: 19px;
+  width: 3px;
+  right: 8px;
+}
